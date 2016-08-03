@@ -1,3 +1,4 @@
 #!/bin/sh
 
-erl -o ebin *.erl
+erlc -o ebin *.erl
+ 
