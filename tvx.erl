@@ -12,7 +12,7 @@
 %
 start() -> spawn(fun() -> 
   process_flag(trap_exit,true),
-  {ok,Listen} = gen_tcp:listen(10086,[binary,{packet,0},{active,true}]),
+  {ok,Listen} = gen_tcp:listen(10240,[binary,{packet,0},{active,true}]),
   spawn(fun() -> start_supervisor(self()) end),
   main_loop(Listen)
 end).
